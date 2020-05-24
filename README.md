@@ -6,8 +6,8 @@ Simple 2D game created in Unity
 The game user's task is to decipher the given word. The user can choose between a transposition or substitution cipher. After making this selection, an encrypted word appears to the user, which he must decrypt and write in the appropriate form in the text field. After correctly deciphering the word, the user can go to the next level. Then the next encrypted word longer than the previous one appear. After decrypted six words, the user wins the game.
 
 Below interface of this game
-![](Assets/Textures/start.PNG)
-![](Assets/Textures/gra.PNG)
+![](WordDecipher/Assets/Textures/start.PNG)
+![](WordDecipher/Assets/Textures/gra.PNG)<br/>
 In folder *Assets/Scripts* there are scripts from the project.<br/>
 *WordDecipher.exe* is located in folder *exe*.
 
