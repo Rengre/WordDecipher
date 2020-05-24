@@ -1,11 +1,12 @@
 # WordDecipher
-**Polish version below**
+
+/*Polish version below*/ <br/><br/>
 Simple 2D game created in Unity 
 
 The game user's task is to decipher the given word. The user can choose between a transposition or substitution cipher. After making this selection, an encrypted word appears to the user, which he must decrypt and write in the appropriate form in the text field. After correctly deciphering the word, the user can go to the next level. Then the next encrypted word longer than the previous one appear. After decrypted six words, the user wins the game.
 
 In folder Assets/Scripts there are scripts from the project.
-WordDecipher.exe is located in folder exe.
+WordDecipher.exe is located in folder /*exe.
 
 
 Prosta gra 2D stworzona w Unity
