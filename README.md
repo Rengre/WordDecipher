@@ -9,7 +9,7 @@ Below interface of this game
 ![](WordDecipher/Assets/Textures/start.PNG)
 ![](WordDecipher/Assets/Textures/gra.PNG)<br/>
 In folder *Assets/Scripts* there are class scripts from the project.<br/>
-*WordDecipher.exe* is located in folder *exe*.
+*WordDecipher.exe* is located in folder *exe*. In order to run *WordDecipher.exe* correctly, this file must be in the *exe* folder
 
 
 <br/><br/><br/><br/>
@@ -18,4 +18,4 @@ Prosta gra 2D stworzona w Unity
 Zadaniem użytkownika gry jest rozszyfrowanie podanego słowa. Użytkownik może wybrać miedzy szyfrem przestawieniowym a podstawieniowym.  Po dokonaniu tego wyboru użytkownikowi ukazuje sie zaszyfrowane słowo, które musi odszyfrować i napisać w odpowiedniej formie w polu tekstowym. Po poprawnym rozszyfrowaniu słowa uzytkownik może przejść do następnego poziomu.  Wtedy ukazuje się kolejne zaszyfrowane słowo dłuższe od poprzedniego. Po odganieciu sześciu słów użytkownik wygrywa grę.
 
 W folderze *Assets/Scripts* znajdują sie skrypty klas projektu<br/>
-*WordDecipher.exe* znajduje się w folderze *exe*.
+*WordDecipher.exe* znajduje się w folderze *exe*. Aby poprawnie uruchomić program *WordDecipher.exe*, plik ten musi znajdować się w folderze *exe*.
