@@ -22,17 +22,22 @@ public class NextLevelControl : MonoBehaviour
         {
             int c = 4 + level;
             string path = "Assets/Scripts/Wyrazy" + c + ".txt";//choses file to level
-            string word = encryptedWord.GetComponent<GenarateText>().GetRandomWordFromFile(path);
+            string wordToEncrypte = encryptedWord.GetComponent<GenarateText>().GetRandomWordFromFile(path);
 
-            if (caeserCipherController.GetComponent<CaeserCipherControl>().caeserGameIsChosen)
-                caeserCipherController.GetComponent<CaeserCipherControl>().SetCaeserCipherWord(word,level);
-            else
-             transpositionCipherController.GetComponent<TranspositionCipherControl>().SetTranspositionCipherWord(word,level);
+            ReactToGameType(wordToEncrypte);
 
             nextLevelLabel.text = "Poziom " + level;
             inputFieldWithAnswer.text = null;
             inputFieldWithAnswer.placeholder.GetComponent<Text>().text = "Wpisz tekst tutaj";
             nextLevelButton.SetActive(false);
         }
+    }
+    private void ReactToGameType(string word)
+    {
+        bool caeserGame = caeserCipherController.GetComponent<CaeserCipherControl>().caeserGameIsChosen;
+        if (caeserGame)
+            caeserCipherController.GetComponent<CaeserCipherControl>().SetCaeserCipherWord(word, level);
+        else
+            transpositionCipherController.GetComponent<TranspositionCipherControl>().SetTranspositionCipherWord(word, level);
     }
 }

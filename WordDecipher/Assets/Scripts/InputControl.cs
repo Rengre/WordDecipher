@@ -13,35 +13,38 @@ public class InputControl : MonoBehaviour
     public Text encryptedWordField;
     public GameObject nextLevelButton;
     public GameObject nextLevelController;
-    public GameObject endingPanel;
+    public GameObject endingPanel;//represents panel activated when the user wins the game
     public AudioSource winnerMusic;//represents music activated when the user wins the game
 
     public void GetInput(string answer)//method used by InputField
     {
+        ReactToAnswer(answer);
+        inputFieldWithAnswer.text = null;
+
+    }
+    private void ReactToAnswer(string answer)
+    {
         int actualLevel = nextLevelController.GetComponent<NextLevelControl>().level;
         int maxLevel = nextLevelController.GetComponent<NextLevelControl>().maxLevel;
+        string goodanswer = encryptedWordField.GetComponent<GenarateText>().word;
 
-        if (answer == encryptedWordField.GetComponent<GenarateText>().word) //check that user set good answer
+        if (answer == goodanswer )
         {
             if (actualLevel < maxLevel)
             {
                 inputFieldWithAnswer.placeholder.GetComponent<Text>().text = "Brawo!!";
                 nextLevelButton.SetActive(true);
             }
-            else 
+            else
             {
                 encryptedWordField.text = "Gratulacje !!";
                 nextLevelButton.SetActive(false);
                 endingPanel.SetActive(true);
                 winnerMusic.Play();
             }
-           
-        }else
+
+        }
+        else
             inputFieldWithAnswer.placeholder.GetComponent<Text>().text = "Próbuj dalej";
-
-        inputFieldWithAnswer.text = null;
-
     }
-
-
 }

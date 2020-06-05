@@ -15,13 +15,17 @@ public class HintPanelControl : MonoBehaviour
     {
         hintPanel.SetActive(true);
         bool caeserGameSelection = caeserCipherController.GetComponent<CaeserCipherControl>().caeserGameIsChosen;
-        imageAlfabetForCaeserGame.SetActive(caeserGameSelection);
-        imageHintForCaeserGame.SetActive(caeserGameSelection);
-        if (caeserGameSelection)
+        RespondToGameType(caeserGameSelection);
+
+    }
+    private void RespondToGameType(bool caeserGame)
+    {
+        imageAlfabetForCaeserGame.SetActive(caeserGame);
+        imageHintForCaeserGame.SetActive(caeserGame);
+        if (caeserGame)
             texthint.text = "Szyfr podstawieniowy\n Każda litera tekstu została zastępiona przez inną literę, oddaloną od niej o stałą liczbę pozycji w alfabecie";
         else
-            texthint.text = "Szyfr przestawieniowy \n Litery w zaszyfrowanym słowie zostały poprzestawiane. \n Sąsiadujące litery zamieniły się miejscami.  ";
-
+            texthint.text = "Szyfr przestawieniowy \n Litery w zaszyfrowanym słowie zostały poprzestawiane. \n Spróbuj odgadnąć słowo.  ";
     }
     public void ExitHint()//method that closes panel with hint
     {

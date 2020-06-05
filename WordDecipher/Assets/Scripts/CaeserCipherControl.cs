@@ -9,19 +9,25 @@ public class CaeserCipherControl : MonoBehaviour
     string cipherWord;
     public bool caeserGameIsChosen = false;
 
-    public void SetCaeserCipherWord(string wordToEncrypte,int actualLevel)//method which use substitution cipher to encrypted word
-    {
-        cipherWord = "";
-        foreach (char letter in wordToEncrypte)
-        {
-            cipherWord += (char)(((letter - 94+actualLevel) % 26) + 97); //each letter is replaced by a letter located three places from it in ASCII code
-        }
-        encryptedTextField.text = cipherWord;
-    }
     public void CeaserCipherButtonIsClicked()//method which is used when CaeserCipher Button is clicked
     {
         caeserGameIsChosen = true;
         string word = encryptedTextField.GetComponent<GenarateText>().GetRandomWordFromFile("Assets/Scripts/Wyrazy4.txt");
-        SetCaeserCipherWord(word,0);
+        SetCaeserCipherWord(word, 0);
+    }
+
+    public void SetCaeserCipherWord(string wordToEncrypte,int currentLevel)//method which set encrypted word to TextField
+    {
+        cipherWord = "";
+        ReplacedLetter(wordToEncrypte, currentLevel);
+        encryptedTextField.text = cipherWord;
+    }
+   
+    private void ReplacedLetter(string wordToEncrypte, int currentLevel)//method which use substitution cipher to encrypted word
+    {
+        foreach (char letter in wordToEncrypte)
+        {
+            cipherWord += (char)(((letter - 94 + currentLevel) % 26) + 97); //each letter is replaced by a letter located in ASCII code at distance =3+number of current level 
+        }
     }
 }
