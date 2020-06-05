@@ -963,7 +963,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625807167}
+      - m_Target: {fileID: 2060126017}
         m_MethodName: Hint
         m_Mode: 1
         m_Arguments:
@@ -1518,8 +1518,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1877733689}
-        m_MethodName: ShiftCipher
+      - m_Target: {fileID: 1883188822}
+        m_MethodName: TranspositionCipherButtonIsClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1877733689}
+      - m_Target: {fileID: 1498154353}
         m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1625807167}
+      - m_Target: {fileID: 2060126017}
         m_MethodName: ExitHint
         m_Mode: 1
         m_Arguments:
@@ -2863,8 +2863,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1877733689}
-        m_MethodName: CaeserCipher
+      - m_Target: {fileID: 1395220746}
+        m_MethodName: CeaserCipherButtonIsClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2909,6 +2909,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379456317}
   m_CullTransparentMesh: 0
+--- !u!1 &1395220745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1395220747}
+  - component: {fileID: 1395220746}
+  m_Layer: 0
+  m_Name: CaserCipherCotroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1395220746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395220745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a96759c70672c4884ae5275fc7b358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encryptedTextField: {fileID: 1877733687}
+  caeserGameIsChosen: 0
+--- !u!4 &1395220747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395220745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.27464, y: 123.6794, z: 27.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1445137826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,6 +3145,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482278379}
   m_CullTransparentMesh: 0
+--- !u!1 &1498154352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498154354}
+  - component: {fileID: 1498154353}
+  m_Layer: 0
+  m_Name: NextLevelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1498154353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498154352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f4d1b3849210748bba52c9d69c2f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encryptedWord: {fileID: 1877733687}
+  inputFieldWithAnswer: {fileID: 437135193}
+  nextLevelLabel: {fileID: 880176913}
+  caeserCipherController: {fileID: 1395220745}
+  transpositionCipherController: {fileID: 1883188821}
+  nextLevelButton: {fileID: 927681117}
+  level: 0
+  maxLevel: 6
+--- !u!4 &1498154354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498154352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.27464, y: 123.6794, z: 27.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625807166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,15 +3225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7192bb512cf5946b4315d1c9c2bc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 437135193}
-  text: {fileID: 1877733687}
-  nextLevel: {fileID: 927681117}
-  quitPanel: {fileID: 368084407}
-  hintPanel: {fileID: 828873873}
-  imageHint: {fileID: 842462248}
-  imageAlfabet: {fileID: 710652772}
-  texthint: {fileID: 2060126016}
-  music: {fileID: 1169664003}
+  inputFieldWithAnswer: {fileID: 437135193}
+  encryptedWordField: {fileID: 1877733687}
+  nextLevelButton: {fileID: 927681117}
+  nextLevelController: {fileID: 1498154352}
+  endingPanel: {fileID: 368084407}
+  winnerMusic: {fileID: 1169664003}
 --- !u!4 &1625807168
 Transform:
   m_ObjectHideFlags: 0
@@ -3669,7 +3762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba59c6d153dc27499bb913d1469b6c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausemenuui: {fileID: 1055805192}
+  pauseMenuPanel: {fileID: 0}
 --- !u!114 &1833462696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3874,15 +3967,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fedecfba1e3e04faea1db294effe89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1877733687}
-  input: {fileID: 437135193}
-  startScreen: {fileID: 340168707}
-  nextLevel: {fileID: 927681117}
-  nextLevelLabel: {fileID: 880176913}
-  caeserGame: 0
-  shiftGame: 0
+  startScreenPanel: {fileID: 340168707}
   word: 
-  level: 0
+--- !u!1 &1883188821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883188823}
+  - component: {fileID: 1883188822}
+  m_Layer: 0
+  m_Name: TranspositionCipherCntroller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1883188822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883188821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb351c857eb39c4fb87a016212c0025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encryptedTextField: {fileID: 1877733687}
+--- !u!4 &1883188823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883188821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 251.27464, y: 123.6794, z: 27.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1935382559
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,6 +4178,7 @@ GameObject:
   - component: {fileID: 2060126019}
   - component: {fileID: 2060126018}
   - component: {fileID: 2060126016}
+  - component: {fileID: 2060126017}
   m_Layer: 5
   m_Name: TextHint1
   m_TagString: Untagged
@@ -4089,6 +4220,23 @@ MonoBehaviour:
   m_Text: 'TEXT
 
 '
+--- !u!114 &2060126017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060126015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2cc1eae0275e4e499db75c85987824b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texthint: {fileID: 2060126016}
+  hintPanel: {fileID: 828873873}
+  imageHintForCaeserGame: {fileID: 842462248}
+  imageAlfabetForCaeserGame: {fileID: 710652772}
+  caeserCipherController: {fileID: 1395220745}
 --- !u!222 &2060126018
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -9,13 +9,14 @@ using UnityEngine.SceneManagement;
 
 public class Pausemenu : MonoBehaviour
 {
-    public static bool gameIsPaused = false; //represents that panel with buttons is visible 
-    public GameObject pauseMenuPanel; // this object represent panel with buttons
+
+    public static bool gameispaused = false; //represents that panel with buttons is visible 
+    public GameObject pausemenuui; // this object represent panel with buttons
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) //check if key ESC is pressed
         {
-            if (gameIsPaused)
+            if (gameispaused)
             {
                 Resume();
             }
@@ -25,24 +26,21 @@ public class Pausemenu : MonoBehaviour
             }
         }
     }
-
    public void Resume() //method that set panel invisible
     {
-        pauseMenuPanel.SetActive(false);
-        gameIsPaused = false;
+        pausemenuui.SetActive(false);
+        gameispaused = false;
     }
-
     void Pause() //method that set panel visible
     {
-        pauseMenuPanel.SetActive(true);
-        gameIsPaused = true;
+       
+        pausemenuui.SetActive(true);
+        gameispaused = true;
     }
-
     public void Quitgame() //method that closes the game activated by the button QUIT
     {
         Application.Quit();
     }
-
     public void RestartGame()//method that restart the game activated by the button MENU
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
